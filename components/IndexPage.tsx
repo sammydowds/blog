@@ -5,7 +5,7 @@ import HeroPost from 'components/HeroPost'
 import IndexPageHead from 'components/IndexPageHead'
 import MoreStories from 'components/MoreStories'
 import IntroTemplate from 'intro-template'
-import * as demo from 'lib/demo.data'
+import * as fallback from 'lib/fallback.data'
 import type { Post, Settings } from 'lib/sanity.queries'
 
 export interface IndexPageProps {
@@ -18,7 +18,7 @@ export interface IndexPageProps {
 export default function IndexPage(props: IndexPageProps) {
   const { preview, loading, posts, settings } = props
   const [heroPost, ...morePosts] = posts || []
-  const { title = demo.title, description = demo.description } = settings || {}
+  const { title = fallback.title, description = fallback.description } = settings || {}
 
   return (
     <>
