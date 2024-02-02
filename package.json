@@ -1,5 +1,5 @@
 {
-  "name": "nextjs-blog-cms-sanity-v3",
+  "name": "blog",
   "private": true,
   "scripts": {
     "build": "next build",
