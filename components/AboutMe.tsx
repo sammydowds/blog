@@ -22,7 +22,7 @@ export const AboutMe = () => {
     <div className="flex-col md:flex-row flex border-y-2 md:justify-center border-gray-50 w-full p-2 gap-6 relative">
       {/* image */}
       <div>
-        <div className="bg-gray-50 md:w-32 h-32">
+        <div className="bg-gray-50 md:w-32 h-32 max-md:mt-10">
 
         </div>
       </div>
