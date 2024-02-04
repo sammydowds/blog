@@ -12,12 +12,6 @@ import { Fragment, useState } from 'react'
 
 const items = [
   {
-    name: 'Resume',
-    description: 'Download a copy of my resume.',
-    href: '#',
-    icon: DocumentArrowDownIcon,
-  },
-  {
     name: 'LinkedIn',
     description: 'View my references, work history, and experiences.',
     href: '#',
@@ -31,7 +25,7 @@ const items = [
   },
 ]
 
-export default function DropdownMenuButton() {
+export default function MoreLinks() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
@@ -48,7 +42,7 @@ export default function DropdownMenuButton() {
       </div>
       <Popover.Group className="hidden lg:flex lg:gap-x-12">
         <Popover className="relative">
-          <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
+          <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-50 p-1">
             More
             <ChevronDownIcon
               className="h-5 w-5 flex-none text-gray-400"
@@ -105,7 +99,7 @@ export default function DropdownMenuButton() {
         <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
             <Link href="/" className="-m-1.5 p-1.5">
-              Sammy Dowds.
+              More Links
             </Link>
             <button
               type="button"
