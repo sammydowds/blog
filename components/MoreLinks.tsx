@@ -2,11 +2,12 @@ import { Dialog, Popover, Transition } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import {
   Bars3Icon,
+  BookOpenIcon,
   BriefcaseIcon,
+  CameraIcon,
   CodeBracketSquareIcon,
-  DocumentArrowDownIcon,
-  XMarkIcon,
-} from '@heroicons/react/24/outline'
+  GlobeAltIcon,
+  XMarkIcon} from '@heroicons/react/24/outline'
 import Link from 'next/link'
 import { Fragment, useState } from 'react'
 
@@ -23,6 +24,24 @@ const items = [
     href: '#',
     icon: CodeBracketSquareIcon,
   },
+  {
+    name: 'Vision',
+    description: 'My visions for things.',
+    href: '#',
+    icon: GlobeAltIcon,
+  },
+  {
+    name: 'Photography',
+    description: 'Some photos I like.',
+    href: '#',
+    icon: CameraIcon,
+  },
+  {
+    name: 'Reading List',
+    description: 'Some books I recommend.',
+    href: '/reading-list',
+    icon: BookOpenIcon,
+  }
 ]
 
 export default function MoreLinks() {
@@ -120,7 +139,18 @@ export default function MoreLinks() {
                       href={item.href}
                       className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                     >
-                      {item.name}
+                      <div className="flex items-center gap-2">
+                        <div>
+                          <item.icon
+                            className="h-6 w-6 text-gray-600 group-hover:text-indigo-600"
+                            aria-hidden="true"
+                          />
+                        </div>
+                        <div>
+                          {item.name}
+                        </div>
+                      </div>
+
                     </a>
                   )
                 })}
