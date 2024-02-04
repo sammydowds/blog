@@ -15,7 +15,8 @@ export interface IndexPageProps {
 
 export default function IndexPage(props: IndexPageProps) {
   const { preview, loading, posts, settings } = props
-  const { title = fallback.title, description = fallback.description } = settings || {}
+  const { title = fallback.title, description = fallback.description } =
+    settings || {}
 
   return (
     <>

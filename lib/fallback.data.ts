@@ -14,8 +14,7 @@ export const description = [
         text: 'Building, learning, and sharing.',
       },
     ],
-    markDefs: [
-    ],
+    markDefs: [],
     style: 'normal',
   },
 ]

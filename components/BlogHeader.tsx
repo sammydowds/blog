@@ -17,7 +17,7 @@ export default function BlogHeader({
           <h1 className="text-md font-bold leading-tight tracking-tighter md:pr-8 md: text-xl">
             {title}
           </h1>
-            <DropdownMenuButton />
+          <DropdownMenuButton />
         </header>
       )
 
