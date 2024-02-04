@@ -12,9 +12,9 @@ export default function BlogHeader({
     return (
       <header className="mb-10 mt-4 flex items-center md:mb-12 flex-col justify-between text-pretty">
         <div className="flex justify-between w-full">
-          <h1 className="text-md font-bold leading-tight tracking-tighter md:pr-8 md: text-xl">
+          <Link href="/" className="hover:underline text-md font-bold leading-tight tracking-tighter md:pr-8 md: text-xl">
             {title}
-          </h1>
+          </Link>
           <div className="flex gap-3">
             <Link
               href="/resume"
