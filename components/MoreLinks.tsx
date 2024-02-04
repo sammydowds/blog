@@ -62,7 +62,7 @@ export default function MoreLinks() {
       <Popover.Group className="hidden lg:flex lg:gap-x-12">
         <Popover className="relative">
           <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-50 p-1">
-            More
+            Links 
             <ChevronDownIcon
               className="h-5 w-5 flex-none text-gray-400"
               aria-hidden="true"
@@ -150,7 +150,6 @@ export default function MoreLinks() {
                           {item.name}
                         </div>
                       </div>
-
                     </a>
                   )
                 })}
