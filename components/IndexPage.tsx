@@ -15,7 +15,7 @@ export interface IndexPageProps {
 
 export default function IndexPage(props: IndexPageProps) {
   const { preview, loading, posts, settings } = props
-  const { title = fallback.title, description = fallback.description } =
+  const { title = fallback.title } =
     settings || {}
 
   return (
@@ -24,7 +24,7 @@ export default function IndexPage(props: IndexPageProps) {
 
       <Layout preview={preview} loading={loading}>
         <Container>
-          <BlogHeader title={title} description={description} level={1} />
+          <BlogHeader title={title} />
           {posts.length > 0 && <MoreStories posts={posts} />}
         </Container>
       </Layout>
