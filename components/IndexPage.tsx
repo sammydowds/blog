@@ -2,7 +2,7 @@ import Container from 'components/BlogContainer'
 import BlogHeader from 'components/BlogHeader'
 import Layout from 'components/BlogLayout'
 import IndexPageHead from 'components/IndexPageHead'
-import MoreStories from 'components/Notes'
+import Notes from 'components/Notes'
 import * as fallback from 'lib/fallback.data'
 import type { Post, Settings } from 'lib/sanity.queries'
 
@@ -25,7 +25,7 @@ export default function IndexPage(props: IndexPageProps) {
       <Layout preview={preview} loading={loading}>
         <Container>
           <BlogHeader title={title} />
-          {posts.length > 0 && <MoreStories posts={posts} />}
+          {posts.length > 0 && <Notes posts={posts} />}
         </Container>
       </Layout>
     </>

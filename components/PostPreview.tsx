@@ -25,11 +25,11 @@ export default function PostPreview({
           {title}
         </Link>
       </h3>
-      <div className="mb-4 text-lg">
+      <div className="mb-1 text-lg">
         <Date dateString={date} />
       </div>
       {excerpt && (
-        <p className="mb-4 text-lg leading-relaxed text-pretty">{excerpt}</p>
+        <p className="mb-1 text-xl leading-relaxed text-pretty">{excerpt}</p>
       )}
     </div>
   )
