@@ -7,11 +7,11 @@ export const AboutMe = () => {
   if (!expanded) {
     return (
       <>
-        <div className="max-md:hidden font-bold bg-green-300 h-10 w-full hover:cursor-pointer flex items-center justify-center" onClick={() => setExpanded(true)}>
+        <div className="max-md:hidden font-bold bg-oklahoma-beige h-10 w-full hover:cursor-pointer flex items-center justify-center" onClick={() => setExpanded(true)}>
           Click here to learn more about me 
           <CursorArrowRaysIcon className="h-8 w-8 text-gray-600 group-hover:text-indigo-600" aria-hidden="true" />
         </div> 
-        <div className="md:hidden font-bold bg-green-300 h-10 w-full hover:cursor-pointer flex items-center justify-center" onClick={() => setExpanded(true)}>
+        <div className="md:hidden font-bold bg-oklahoma-beige text-whit h-10 w-full hover:cursor-pointer flex items-center justify-center" onClick={() => setExpanded(true)}>
           Tap here to learn more about me 
           <CursorArrowRaysIcon className="h-8 w-8 text-gray-600 group-hover:text-indigo-600" aria-hidden="true" />
         </div>
@@ -64,7 +64,6 @@ export const AboutMe = () => {
         <XMarkIcon className="w-6 h-6" strokeWidth={1} />
       </div>
       </div>
-
       </div>
   )
 }
