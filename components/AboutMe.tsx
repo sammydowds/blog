@@ -9,11 +9,11 @@ export const AboutMe = () => {
       <>
         <div className="max-md:hidden font-bold bg-oklahoma-beige h-10 w-full hover:cursor-pointer flex items-center justify-center" onClick={() => setExpanded(true)}>
           Click here to learn more about me 
-          <CursorArrowRaysIcon className="h-8 w-8 text-gray-600 group-hover:text-indigo-600" aria-hidden="true" />
+          <CursorArrowRaysIcon className="h-8 w-8 text-gray-600 group-hover:text-indigo-600" stroke="black" aria-hidden="true" />
         </div> 
         <div className="md:hidden font-bold bg-oklahoma-beige text-whit h-10 w-full hover:cursor-pointer flex items-center justify-center" onClick={() => setExpanded(true)}>
           Tap here to learn more about me 
-          <CursorArrowRaysIcon className="h-8 w-8 text-gray-600 group-hover:text-indigo-600" aria-hidden="true" />
+          <CursorArrowRaysIcon className="h-8 w-8 text-gray-600 group-hover:text-indigo-600" stroke="black" aria-hidden="true" />
         </div>
       </>
     )
