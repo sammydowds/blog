@@ -2,16 +2,16 @@ import {CursorArrowRaysIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { useState } from "react"
 
 export const AboutMe = () => {
-  const [expanded, setExpanded] = useState(false)
+  const [expanded, setExpanded] = useState(true)
 
   if (!expanded) {
     return (
       <>
-        <div className="max-md:hidden font-bold bg-oklahoma-beige h-10 w-full hover:cursor-pointer flex items-center justify-center" onClick={() => setExpanded(true)}>
+        <div className="max-md:hidden font-bold bg-oklahoma-beige h-10 w-full hover:cursor-pointer flex items-center justify-center text-sm" onClick={() => setExpanded(true)}>
           Click here to learn more about me 
           <CursorArrowRaysIcon className="h-8 w-8 text-gray-600 group-hover:text-indigo-600" stroke="black" aria-hidden="true" />
         </div> 
-        <div className="md:hidden font-bold bg-oklahoma-beige text-whit h-10 w-full hover:cursor-pointer flex items-center justify-center" onClick={() => setExpanded(true)}>
+        <div className="md:hidden font-bold bg-oklahoma-beige text-whit h-10 w-full hover:cursor-pointer flex items-center justify-center text-sm" onClick={() => setExpanded(true)}>
           Tap here to learn more about me 
           <CursorArrowRaysIcon className="h-8 w-8 text-gray-600 group-hover:text-indigo-600" stroke="black" aria-hidden="true" />
         </div>
@@ -27,7 +27,7 @@ export const AboutMe = () => {
         </div>
       </div>
       {/* Info Section */}
-      <div className="flex md:flex-row max-md:flex-col gap-4 md:items-center">
+      <div className="flex md:flex-row max-md:flex-col gap-6 md:items-center">
       <div className="flex-col text-xs">
         <div className="flex gap-1 space-between gap-4 w-full">
           <div className="text-gray-500">TITLE</div>
@@ -39,7 +39,7 @@ export const AboutMe = () => {
         </div>
         <div className="flex gap-1 space-between gap-4 w-full">
           <div className="text-gray-500">COLLEGE</div>
-          <div>Oklahoma State University</div>
+          <div>Oklahoma State</div>
         </div>
         <div className="flex gap-1 space-between gap-4 w-full">
           <div className="text-gray-500">HOBBIES</div>
@@ -49,14 +49,25 @@ export const AboutMe = () => {
           <div className="text-gray-500">TEAMS</div>
           <div>Thunder, Bulls, Bears</div>
         </div>
+        <div className="flex gap-1 space-between gap-4 w-full">
+          <div className="text-gray-500">STATUS</div>
+          <div className="flex items-center gap-1">
+            <div className="h-1 w-1 rounded-full bg-chi-red"></div>
+            For Hire
+          </div>
+        </div>
       </div>
       {/* Summary Section */}
       <div className="flex-col max-w-sm">
-        <div className="text-gray-500 text-xs">INTRO</div>
+        <div className="text-gray-500 text-xs flex items-center gap-1">
+          INTRO
+        </div>
         <div className="text-sm">I am an experienced full stack engineer working evenly on both sides of the stack. I have a degree in Mechanical Engineering (Dec. 2016), but switched careers in 2020. </div>
       </div>
       <div className="flex-col max-w-sm">
-        <div className="text-gray-500 text-xs">SKILLS</div>
+        <div className="text-gray-500 text-xs flex items-center gap-1">
+          SKILLS
+        </div>
         <div className="text-sm">TypeScript, Python, React, Redux, Django, FastAPI, Express, Node, PostgreSQL, HTML, CSS, TailwindCSS, Chakra UI, Full Stack Development</div>
       </div>
       {/* Others */}
