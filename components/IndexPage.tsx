@@ -28,8 +28,10 @@ export default function IndexPage(props: IndexPageProps) {
       <Layout preview={preview} loading={loading}>
         <Container>
           <BlogHeader title={title} about={about} />
-          {photos.length > 0 && <Photos photos={photos} />}
-          {posts.length > 0 && <Posts posts={posts} />}
+          <div className="container mx-auto max-md:px-2">
+            {photos.length > 0 && <Photos photos={photos} />}
+            {posts.length > 0 && <Posts posts={posts} />}
+          </div>
         </Container>
       </Layout>
     </>

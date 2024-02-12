@@ -46,10 +46,10 @@ export const AboutMe = (about: About) => {
     )
   }
   return (
-    <div className="flex-col md:flex-row flex border-y-2 md:justify-evenly border-gray-50 w-full p-2 gap-6 relative">
+    <div className="flex-col md:flex-row flex md:justify-center border-y-2 border-gray-50 w-full p-4 gap-6 relative">
       {/* Image and Info */}
       <div>
-        <div className="max-md:mt-10 gap-5 items-center flex">
+        <div className="gap-5 items-center flex">
           <div className="relative h-24 w-24 overflow-hidden">
             <Image
               src={
@@ -107,33 +107,30 @@ export const AboutMe = (about: About) => {
           </div>
         </div>
       </div>
-      {/* Info Section */}
-      <div className="flex md:flex-row max-md:flex-col gap-5 md:items-center">
-        {/* Summary Section */}
-        <div className="flex-col max-w-sm">
-          <div className="text-gray-500 text-xs flex items-center gap-1">
-            INTRO
-          </div>
-          <div className="text-sm">{intro}</div>
+      {/* Summary Section */}
+      <div className="flex-col max-w-md">
+        <div className="text-gray-500 text-xs flex items-center gap-1">
+          INTRO
         </div>
-        <div className="flex-col max-w-sm">
-          <div className="text-gray-500 text-xs flex items-center gap-1">
-            SKILLS
-          </div>
-          <div className="text-sm">
-            {skills?.map((s, i) => {
-              return `${s}${i !== skills.length - 1 ? ', ' : ''}`
-            })}
-          </div>
+        <div className="text-sm">{intro}</div>
+      </div>
+      <div className="flex-col max-w-md">
+        <div className="text-gray-500 text-xs flex items-center gap-1">
+          SKILLS
         </div>
+        <div className="text-sm">
+          {skills?.map((s, i) => {
+            return `${s}${i !== skills.length - 1 ? ', ' : ''}`
+          })}
+        </div>
+      </div>
         {/* Others */}
         <div
           onClick={() => setExpanded(false)}
-          className="w-8 h-8 rounded-full bg-gray-100 absolute right-2 top-2 flex items-center justify-center hover:cursor-pointer"
+          className="w-8 h-8 rounded-full bg-gray-100 absolute right-4 md:right-8 top-2 flex items-center justify-center hover:cursor-pointer"
         >
           <XMarkIcon className="w-6 h-6" strokeWidth={1} />
         </div>
       </div>
-    </div>
   )
 }
