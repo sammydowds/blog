@@ -51,12 +51,12 @@ export default defineType({
     defineField({
       name: 'intro',
       title: 'Intro',
-      type: 'string',
+      type: 'text',
     }),
     defineField({
       name: 'status',
       title: 'Status',
-      type: 'string',
+      type: 'text',
     }),
   ],
 })

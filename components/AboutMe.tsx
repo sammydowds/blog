@@ -46,7 +46,7 @@ export const AboutMe = (about: About) => {
     )
   }
   return (
-    <div className="flex-col md:flex-row flex border-y-2 md:justify-center border-gray-50 w-full p-2 gap-6 relative">
+    <div className="flex-col md:flex-row flex border-y-2 md:justify-evenly border-gray-50 w-full p-2 gap-6 relative">
       {/* Image and Info */}
       <div>
         <div className="max-md:mt-10 gap-5 items-center flex">

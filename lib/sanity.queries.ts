@@ -11,6 +11,12 @@ const postFields = groq`
   "author": author->{name, picture},
 `
 
+const photoFields = groq`
+  _id,
+  description,
+  image,
+`
+
 const aboutFields = groq`
   _id,
   _updatedAt,
@@ -31,6 +37,11 @@ export const settingsQuery = groq`*[_type == "settings"][0]`
 export const indexQuery = groq`
 *[_type == "post"] | order(date desc, _updatedAt desc) {
   ${postFields}
+}`
+
+export const photosQuery = groq`
+*[_type == "photo"] | order(date desc, _updatedAt desc) {
+  ${photoFields}
 }`
 
 export const mostRecentAboutQuery = groq`
@@ -97,4 +108,10 @@ export interface Settings {
   ogImage?: {
     title?: string
   }
+}
+
+export interface Photo {
+  _id?: string
+  description?: string
+  image?: any 
 }
