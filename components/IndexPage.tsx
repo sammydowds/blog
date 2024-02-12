@@ -4,9 +4,10 @@ import Layout from 'components/BlogLayout'
 import IndexPageHead from 'components/IndexPageHead'
 import Notes from 'components/Notes'
 import * as fallback from 'lib/fallback.data'
-import type { Post, Settings } from 'lib/sanity.queries'
+import type { About, Post, Settings } from 'lib/sanity.queries'
 
 export interface IndexPageProps {
+  about?: About 
   preview?: boolean
   loading?: boolean
   posts: Post[]
@@ -14,7 +15,7 @@ export interface IndexPageProps {
 }
 
 export default function IndexPage(props: IndexPageProps) {
-  const { preview, loading, posts, settings } = props
+  const { preview, loading, posts, settings, about } = props
   const { title = fallback.title } =
     settings || {}
 
@@ -24,7 +25,7 @@ export default function IndexPage(props: IndexPageProps) {
 
       <Layout preview={preview} loading={loading}>
         <Container>
-          <BlogHeader title={title} />
+          <BlogHeader title={title} about={about} />
           {posts.length > 0 && <Notes posts={posts} />}
         </Container>
       </Layout>

@@ -11,11 +11,31 @@ const postFields = groq`
   "author": author->{name, picture},
 `
 
+const aboutFields = groq`
+  _id,
+  _updatedAt,
+  name,
+  hobbies,
+  intro,
+  profilePicture,
+  resume,
+  status,
+  skills,
+  teams,
+  title,
+  yearsOfExperience,
+`
+
 export const settingsQuery = groq`*[_type == "settings"][0]`
 
 export const indexQuery = groq`
 *[_type == "post"] | order(date desc, _updatedAt desc) {
   ${postFields}
+}`
+
+export const mostRecentAboutQuery = groq`
+*[_type == "about"] | order(_updatedAt desc) [0] {
+  ${aboutFields}
 }`
 
 export const postAndMoreStoriesQuery = groq`
@@ -55,6 +75,20 @@ export interface Post {
   author?: Author
   slug?: string
   content?: any
+}
+
+export interface About {
+  _id: string
+  title?: string
+  profilePicture?: any 
+  name?: any
+  skills?: string[] 
+  hobbies?: string[] 
+  teams?: string[] 
+  intro?: string 
+  status?: string 
+  yearsOfExperience?: string 
+  _updatedAt?: string
 }
 
 export interface Settings {

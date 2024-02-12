@@ -1,12 +1,15 @@
 import MoreLinks from 'components/MoreLinks'
+import { About } from 'lib/sanity.queries'
 import Link from 'next/link'
 
 import { AboutMe } from './AboutMe'
 
 export default function BlogHeader({
+  about,
   title,
 }: {
   title: string
+  about?: About 
   description?: any[]
 }) {
     return (
@@ -25,7 +28,7 @@ export default function BlogHeader({
             <MoreLinks />
           </div>
         </div>
-        <AboutMe />
+        <AboutMe {...about} />
       </header>
     )
 }
