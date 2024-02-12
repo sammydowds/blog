@@ -6,6 +6,7 @@ import Posts from 'components/Posts'
 import * as fallback from 'lib/fallback.data'
 import type { About, Photo, Post, Settings } from 'lib/sanity.queries'
 
+import { AboutMe } from './AboutMe'
 import Photos from './Photos'
 
 export interface IndexPageProps {
@@ -27,10 +28,11 @@ export default function IndexPage(props: IndexPageProps) {
 
       <Layout preview={preview} loading={loading}>
         <Container>
-          <BlogHeader title={title} about={about} />
-          <div className="container mx-auto max-md:px-2">
-            {photos.length > 0 && <Photos photos={photos} />}
+          <BlogHeader title={title} />
+          <AboutMe {...about} />
+          <div className="container mx-auto max-md:px-2 mt-5">
             {posts.length > 0 && <Posts posts={posts} />}
+            {photos.length > 0 && <Photos photos={photos} />}
           </div>
         </Container>
       </Layout>

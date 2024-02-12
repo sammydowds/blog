@@ -1,19 +1,15 @@
 import MoreLinks from 'components/MoreLinks'
-import { About } from 'lib/sanity.queries'
 import Link from 'next/link'
 
-import { AboutMe } from './AboutMe'
 
 export default function BlogHeader({
-  about,
   title,
 }: {
   title: string
-  about?: About
   description?: any[]
 }) {
   return (
-    <header className="mb-10 flex items-center md:mb-12 flex-col justify-between text-pretty">
+    <header className="flex items-center flex-col justify-between text-pretty">
       <div className="flex items-center justify-between w-full p-2">
         <Link
           href="/"
@@ -31,7 +27,6 @@ export default function BlogHeader({
           <MoreLinks />
         </div>
       </div>
-      <AboutMe {...about} />
     </header>
   )
 }

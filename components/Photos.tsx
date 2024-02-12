@@ -4,10 +4,8 @@ import PhotoPreview from './PhotoPreview'
 
 export default function Photos({ photos }: { photos: Photo[] }) {
   return (
-    <section>
-      <h2 className="mb-8 text-xl font-bold leading-tight tracking-tighter md:text-2xl">
-       Photos 
-      </h2>
+    <section className="flex flex-col items-center">
+      <div className="h-8 w-12 border-t-2 border-oklahoma-beige" />
       <div className="mb-16 grid grid-cols-1 gap-y-6 md:grid-cols-6 md:gap-x-2 md:gap-y-5 lg:gap-x-6">
         {photos.map((p) => (
           <PhotoPreview
