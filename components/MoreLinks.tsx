@@ -25,24 +25,6 @@ const items = [
     href: '#',
     icon: CodeBracketSquareIcon,
   },
-  {
-    name: 'Vision',
-    description: 'My visions for things.',
-    href: '#',
-    icon: GlobeAltIcon,
-  },
-  {
-    name: 'Photography',
-    description: 'Some photos I like.',
-    href: '#',
-    icon: CameraIcon,
-  },
-  {
-    name: 'Reading List',
-    description: 'Some books I recommend.',
-    href: '/reading-list',
-    icon: BookOpenIcon,
-  },
 ]
 
 export default function MoreLinks() {

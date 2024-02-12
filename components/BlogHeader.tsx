@@ -13,8 +13,8 @@ export default function BlogHeader({
   description?: any[]
 }) {
   return (
-    <header className="mb-10 mt-2 flex items-center md:mb-12 flex-col justify-between text-pretty">
-      <div className="flex justify-between w-full px-2">
+    <header className="mb-10 flex items-center md:mb-12 flex-col justify-between text-pretty">
+      <div className="flex items-center justify-between w-full p-2">
         <Link
           href="/"
           className="hover:underline text-md font-bold leading-tight tracking-tighter md:pr-8 md: text-xl"
