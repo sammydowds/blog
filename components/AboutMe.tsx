@@ -1,23 +1,46 @@
-import {CursorArrowRaysIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { CursorArrowRaysIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { urlForImage } from 'lib/sanity.image'
 import { About } from 'lib/sanity.queries'
 import Image from 'next/image'
-import { useState } from "react"
+import { useState } from 'react'
 
 export const AboutMe = (about: About) => {
   const [expanded, setExpanded] = useState(true)
-  const { title, hobbies, skills, intro, status, yearsOfExperience, teams, profilePicture} = about
+  const {
+    title,
+    hobbies,
+    skills,
+    intro,
+    status,
+    yearsOfExperience,
+    teams,
+    profilePicture,
+  } = about
 
   if (!expanded) {
     return (
       <>
-        <div className="max-md:hidden font-bold bg-oklahoma-beige h-10 w-full hover:cursor-pointer flex items-center justify-center text-sm" onClick={() => setExpanded(true)}>
-          Click here to learn more about me 
-          <CursorArrowRaysIcon className="h-8 w-8 text-gray-600 group-hover:text-indigo-600" stroke="black" aria-hidden="true" />
-        </div> 
-        <div className="md:hidden font-bold bg-oklahoma-beige text-whit h-10 w-full hover:cursor-pointer flex items-center justify-center text-sm" onClick={() => setExpanded(true)}>
-          Tap here to learn more about me 
-          <CursorArrowRaysIcon className="h-8 w-8 text-gray-600 group-hover:text-indigo-600" stroke="black" aria-hidden="true" />
+        <div
+          className="max-md:hidden font-bold bg-oklahoma-beige h-10 w-full hover:cursor-pointer flex items-center justify-center text-sm"
+          onClick={() => setExpanded(true)}
+        >
+          Click here to learn more about me
+          <CursorArrowRaysIcon
+            className="h-8 w-8 text-gray-600 group-hover:text-indigo-600"
+            stroke="black"
+            aria-hidden="true"
+          />
+        </div>
+        <div
+          className="md:hidden font-bold bg-oklahoma-beige text-whit h-10 w-full hover:cursor-pointer flex items-center justify-center text-sm"
+          onClick={() => setExpanded(true)}
+        >
+          Tap here to learn more about me
+          <CursorArrowRaysIcon
+            className="h-8 w-8 text-gray-600 group-hover:text-indigo-600"
+            stroke="black"
+            aria-hidden="true"
+          />
         </div>
       </>
     )
@@ -31,11 +54,15 @@ export const AboutMe = (about: About) => {
             <Image
               src={
                 profilePicture?.asset?._ref
-                  ? urlForImage(profilePicture).height(500).width(500).fit('crop').url()
+                  ? urlForImage(profilePicture)
+                      .height(500)
+                      .width(500)
+                      .fit('crop')
+                      .url()
                   : 'https://source.unsplash.com/96x96/?face'
               }
-              width={96} 
-              height={96} 
+              width={96}
+              height={96}
               alt={profilePicture?.alt ?? title}
             />
           </div>
@@ -56,21 +83,17 @@ export const AboutMe = (about: About) => {
             <div className="flex gap-1 space-between gap-4 w-full">
               <div className="text-gray-500">HOBBIES</div>
               <div>
-                {
-                  hobbies?.map((h, i) => {
-                    return `${h}${i !== hobbies.length - 1 ? ', ' : ''}`
-                  })
-                }
+                {hobbies?.map((h, i) => {
+                  return `${h}${i !== hobbies.length - 1 ? ', ' : ''}`
+                })}
               </div>
             </div>
             <div className="flex gap-1 space-between gap-4 w-full">
               <div className="text-gray-500">TEAMS</div>
               <div>
-                {
-                  teams?.map((t, i) => {
-                    return `${t}${i !== teams.length - 1 ? ', ' : ''}`
-                  })
-                }
+                {teams?.map((t, i) => {
+                  return `${t}${i !== teams.length - 1 ? ', ' : ''}`
+                })}
               </div>
             </div>
             <div className="flex gap-1 space-between gap-4 w-full">
@@ -86,30 +109,31 @@ export const AboutMe = (about: About) => {
       </div>
       {/* Info Section */}
       <div className="flex md:flex-row max-md:flex-col gap-5 md:items-center">
-      {/* Summary Section */}
-      <div className="flex-col max-w-sm">
-        <div className="text-gray-500 text-xs flex items-center gap-1">
-          INTRO
+        {/* Summary Section */}
+        <div className="flex-col max-w-sm">
+          <div className="text-gray-500 text-xs flex items-center gap-1">
+            INTRO
+          </div>
+          <div className="text-sm">{intro}</div>
         </div>
-        <div className="text-sm">{intro}</div>
-      </div>
-      <div className="flex-col max-w-sm">
-        <div className="text-gray-500 text-xs flex items-center gap-1">
-          SKILLS
-        </div>
-        <div className="text-sm">
-          {
-            skills?.map((s, i) => {
+        <div className="flex-col max-w-sm">
+          <div className="text-gray-500 text-xs flex items-center gap-1">
+            SKILLS
+          </div>
+          <div className="text-sm">
+            {skills?.map((s, i) => {
               return `${s}${i !== skills.length - 1 ? ', ' : ''}`
-            })
-          }
+            })}
+          </div>
+        </div>
+        {/* Others */}
+        <div
+          onClick={() => setExpanded(false)}
+          className="w-8 h-8 rounded-full bg-gray-100 absolute right-2 top-2 flex items-center justify-center hover:cursor-pointer"
+        >
+          <XMarkIcon className="w-6 h-6" strokeWidth={1} />
         </div>
       </div>
-      {/* Others */}
-      <div onClick={() => setExpanded(false)} className="w-8 h-8 rounded-full bg-gray-100 absolute right-2 top-2 flex items-center justify-center hover:cursor-pointer">
-        <XMarkIcon className="w-6 h-6" strokeWidth={1} />
-      </div>
-      </div>
-      </div>
+    </div>
   )
 }

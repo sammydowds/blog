@@ -12,7 +12,7 @@ import type { About, Post, Settings } from 'lib/sanity.queries'
 import { notFound } from 'next/navigation'
 
 export interface PostPageProps {
-  about?: About 
+  about?: About
   preview?: boolean
   loading?: boolean
   post: Post
@@ -23,7 +23,14 @@ export interface PostPageProps {
 const NO_POSTS: Post[] = []
 
 export default function PostPage(props: PostPageProps) {
-  const { preview, loading, morePosts = NO_POSTS, post, settings, about } = props
+  const {
+    preview,
+    loading,
+    morePosts = NO_POSTS,
+    post,
+    settings,
+    about,
+  } = props
   const { title = fallback.title } = settings || {}
 
   const slug = post?.slug

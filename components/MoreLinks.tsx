@@ -7,7 +7,8 @@ import {
   CameraIcon,
   CodeBracketSquareIcon,
   GlobeAltIcon,
-  XMarkIcon} from '@heroicons/react/24/outline'
+  XMarkIcon,
+} from '@heroicons/react/24/outline'
 import Link from 'next/link'
 import { Fragment, useState } from 'react'
 
@@ -41,7 +42,7 @@ const items = [
     description: 'Some books I recommend.',
     href: '/reading-list',
     icon: BookOpenIcon,
-  }
+  },
 ]
 
 export default function MoreLinks() {
@@ -62,7 +63,7 @@ export default function MoreLinks() {
       <Popover.Group className="hidden lg:flex lg:gap-x-12">
         <Popover className="relative">
           <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-50 p-1">
-            Links 
+            Links
             <ChevronDownIcon
               className="h-5 w-5 flex-none text-gray-400"
               aria-hidden="true"
@@ -146,9 +147,7 @@ export default function MoreLinks() {
                             aria-hidden="true"
                           />
                         </div>
-                        <div>
-                          {item.name}
-                        </div>
+                        <div>{item.name}</div>
                       </div>
                     </a>
                   )

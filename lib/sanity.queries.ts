@@ -80,14 +80,14 @@ export interface Post {
 export interface About {
   _id: string
   title?: string
-  profilePicture?: any 
+  profilePicture?: any
   name?: any
-  skills?: string[] 
-  hobbies?: string[] 
-  teams?: string[] 
-  intro?: string 
-  status?: string 
-  yearsOfExperience?: string 
+  skills?: string[]
+  hobbies?: string[]
+  teams?: string[]
+  intro?: string
+  status?: string
+  yearsOfExperience?: string
   _updatedAt?: string
 }
 

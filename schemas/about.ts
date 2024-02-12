@@ -18,12 +18,12 @@ export default defineType({
     defineField({
       name: 'resume',
       title: 'Resume',
-      type: 'file'
+      type: 'file',
     }),
     defineField({
       name: 'title',
       title: 'Title',
-      type: 'string'
+      type: 'string',
     }),
     defineField({
       name: 'yearsOfExperience',
@@ -34,19 +34,19 @@ export default defineType({
       name: 'hobbies',
       title: 'Hobbies',
       type: 'array',
-      of: [{ type: 'string' }]
+      of: [{ type: 'string' }],
     }),
     defineField({
       name: 'skills',
       title: 'Skills',
       type: 'array',
-      of: [{ type: 'string' }]
+      of: [{ type: 'string' }],
     }),
     defineField({
       name: 'teams',
       title: 'Teams',
       type: 'array',
-      of: [{ type: 'string' }]
+      of: [{ type: 'string' }],
     }),
     defineField({
       name: 'intro',
@@ -57,6 +57,6 @@ export default defineType({
       name: 'status',
       title: 'Status',
       type: 'string',
-    })
-  ]
-}) 
+    }),
+  ],
+})

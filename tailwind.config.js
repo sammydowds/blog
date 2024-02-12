@@ -18,7 +18,7 @@ module.exports = {
         'chi-red': '#d22030',
         'chi-blue': '#B3DDF2',
         'oklahoma-blue': '#0073cf',
-        'oklahoma-beige': '#efe8c7'
+        'oklahoma-beige': '#efe8c7',
       },
       spacing: {
         28: '7rem',

@@ -7,7 +7,7 @@ import * as fallback from 'lib/fallback.data'
 import type { About, Post, Settings } from 'lib/sanity.queries'
 
 export interface IndexPageProps {
-  about?: About 
+  about?: About
   preview?: boolean
   loading?: boolean
   posts: Post[]
@@ -16,8 +16,7 @@ export interface IndexPageProps {
 
 export default function IndexPage(props: IndexPageProps) {
   const { preview, loading, posts, settings, about } = props
-  const { title = fallback.title } =
-    settings || {}
+  const { title = fallback.title } = settings || {}
 
   return (
     <>
