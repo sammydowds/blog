@@ -24,64 +24,68 @@ export const AboutMe = (about: About) => {
   }
   return (
     <div className="flex-col md:flex-row flex border-y-2 md:justify-center border-gray-50 w-full p-2 gap-6 relative">
-      {/* image */}
+      {/* Image and Info */}
       <div>
-        <div className="bg-gray-50 md:w-32 h-32 max-md:mt-10">
-          <Image
-            src={
-              profilePicture?.asset?._ref
-                ? urlForImage(profilePicture).height(400).width(400).fit('crop').url()
-                : 'https://source.unsplash.com/96x96/?face'
-            }
-            height={100}
-            width={100}
-            alt={profilePicture?.alt ?? title}
-          />
+        <div className="max-md:mt-10 gap-5 items-center flex">
+          <div className="relative h-24 w-24 overflow-hidden">
+            <Image
+              src={
+                profilePicture?.asset?._ref
+                  ? urlForImage(profilePicture).height(500).width(500).fit('crop').url()
+                  : 'https://source.unsplash.com/96x96/?face'
+              }
+              width={96} 
+              height={96} 
+              alt={profilePicture?.alt ?? title}
+            />
+          </div>
+
+          <div className="flex-col text-xs">
+            <div className="flex gap-1 space-between gap-4 w-full">
+              <div className="text-gray-500">TITLE</div>
+              <div>{title}</div>
+            </div>
+            <div className="flex gap-1 space-between gap-4 w-full">
+              <div className="text-gray-500">EXPERIENCE</div>
+              <div>{yearsOfExperience}</div>
+            </div>
+            <div className="flex gap-1 space-between gap-4 w-full">
+              <div className="text-gray-500">COLLEGE</div>
+              <div>Oklahoma State</div>
+            </div>
+            <div className="flex gap-1 space-between gap-4 w-full">
+              <div className="text-gray-500">HOBBIES</div>
+              <div>
+                {
+                  hobbies?.map((h, i) => {
+                    return `${h}${i !== hobbies.length - 1 ? ', ' : ''}`
+                  })
+                }
+              </div>
+            </div>
+            <div className="flex gap-1 space-between gap-4 w-full">
+              <div className="text-gray-500">TEAMS</div>
+              <div>
+                {
+                  teams?.map((t, i) => {
+                    return `${t}${i !== teams.length - 1 ? ', ' : ''}`
+                  })
+                }
+              </div>
+            </div>
+            <div className="flex gap-1 space-between gap-4 w-full">
+              <div className="text-gray-500">STATUS</div>
+              <div className="flex items-center gap-1 relative">
+                <div className="absolute inline-flex h-1 w-1 rounded-full bg-chi-red animate-ping"></div>
+                <div className="h-1 w-1 rounded-full bg-chi-red"> </div>
+                {status}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       {/* Info Section */}
-      <div className="flex md:flex-row max-md:flex-col gap-6 md:items-center">
-      <div className="flex-col text-xs">
-        <div className="flex gap-1 space-between gap-4 w-full">
-          <div className="text-gray-500">TITLE</div>
-          <div>{title}</div>
-        </div>
-        <div className="flex gap-1 space-between gap-4 w-full">
-          <div className="text-gray-500">EXPERIENCE</div>
-          <div>{yearsOfExperience}</div>
-        </div>
-        <div className="flex gap-1 space-between gap-4 w-full">
-          <div className="text-gray-500">COLLEGE</div>
-          <div>Oklahoma State</div>
-        </div>
-        <div className="flex gap-1 space-between gap-4 w-full">
-          <div className="text-gray-500">HOBBIES</div>
-          <div>
-            {
-              hobbies?.map((h, i) => {
-                return `${h}${i !== hobbies.length - 1 ? ', ' : ''}`
-              })
-            }
-          </div>
-        </div>
-        <div className="flex gap-1 space-between gap-4 w-full">
-          <div className="text-gray-500">TEAMS</div>
-          <div>
-            {
-              teams?.map((t, i) => {
-                return `${t}${i !== teams.length - 1 ? ', ' : ''}`
-              })
-            }
-          </div>
-        </div>
-        <div className="flex gap-1 space-between gap-4 w-full">
-          <div className="text-gray-500">STATUS</div>
-          <div className="flex items-center gap-1">
-            <div className="h-1 w-1 rounded-full bg-chi-red"></div>
-            {status}
-          </div>
-        </div>
-      </div>
+      <div className="flex md:flex-row max-md:flex-col gap-5 md:items-center">
       {/* Summary Section */}
       <div className="flex-col max-w-sm">
         <div className="text-gray-500 text-xs flex items-center gap-1">
