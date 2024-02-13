@@ -14,9 +14,6 @@ export default function CoverImage(props: CoverImageProps) {
   const { title, slug, image: source, priority } = props
   const image = source?.asset?._ref ? (
     <div
-      className={cn('shadow-small', {
-        'transition-shadow duration-200 hover:shadow-medium': slug,
-      })}
     >
       <Image
         className="h-auto w-full"

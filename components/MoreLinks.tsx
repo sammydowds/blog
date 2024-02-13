@@ -16,13 +16,13 @@ const items = [
   {
     name: 'LinkedIn',
     description: 'View my references, work history, and experiences.',
-    href: '#',
+    href: 'https://www.linkedin.com/in/sammydowds/',
     icon: BriefcaseIcon,
   },
   {
     name: 'GitHub',
     description: 'View my code.',
-    href: '#',
+    href: 'https://github.com/sammydowds',
     icon: CodeBracketSquareIcon,
   },
 ]
@@ -78,6 +78,7 @@ export default function MoreLinks() {
                       <a
                         href={item.href}
                         className="block font-semibold text-gray-900"
+                        target="_blank"
                       >
                         {item.name}
                         <span className="absolute inset-0" />

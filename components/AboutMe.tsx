@@ -55,8 +55,8 @@ export const AboutMe = (about: About) => {
               src={
                 profilePicture?.asset?._ref
                   ? urlForImage(profilePicture)
-                      .height(500)
-                      .width(500)
+                      .height(800)
+                      .width(800)
                       .fit('crop')
                       .url()
                   : 'https://source.unsplash.com/96x96/?face'
