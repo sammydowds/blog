@@ -2,11 +2,8 @@ import { Dialog, Popover, Transition } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import {
   Bars3Icon,
-  BookOpenIcon,
   BriefcaseIcon,
-  CameraIcon,
   CodeBracketSquareIcon,
-  GlobeAltIcon,
   XMarkIcon,
 } from '@heroicons/react/24/outline'
 import Link from 'next/link'
