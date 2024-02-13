@@ -9,8 +9,7 @@ export default function PhotoPreview({
   return (
     <div className="overflow-hidden">
       <div>
-        {
-          image?.asset?._ref ? (
+        {image?.asset?._ref ? (
           <Image
             className="h-auto w-full"
             width={500}
@@ -19,8 +18,7 @@ export default function PhotoPreview({
             src={urlForImage(image).height(250).width(500).url()}
             sizes="100vw"
           />
-          ) : null
-        }
+        ) : null}
       </div>
     </div>
   )

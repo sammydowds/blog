@@ -113,5 +113,5 @@ export interface Settings {
 export interface Photo {
   _id?: string
   description?: string
-  image?: any 
+  image?: any
 }

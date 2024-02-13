@@ -1,7 +1,6 @@
 import MoreLinks from 'components/MoreLinks'
 import Link from 'next/link'
 
-
 export default function BlogHeader({
   title,
 }: {

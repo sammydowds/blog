@@ -124,13 +124,13 @@ export const AboutMe = (about: About) => {
           })}
         </div>
       </div>
-        {/* Others */}
-        <div
-          onClick={() => setExpanded(false)}
-          className="w-8 h-8 rounded-full bg-gray-100 absolute right-4 md:right-8 top-2 flex items-center justify-center hover:cursor-pointer"
-        >
-          <XMarkIcon className="w-6 h-6" strokeWidth={1} />
-        </div>
+      {/* Others */}
+      <div
+        onClick={() => setExpanded(false)}
+        className="w-8 h-8 rounded-full bg-gray-100 absolute right-4 md:right-8 top-2 flex items-center justify-center hover:cursor-pointer"
+      >
+        <XMarkIcon className="w-6 h-6" strokeWidth={1} />
       </div>
+    </div>
   )
 }

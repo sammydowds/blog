@@ -27,10 +27,19 @@ export default function Page(props: PageProps) {
   const { posts, settings, draftMode, about, photos } = props
 
   if (draftMode) {
-    return <PreviewIndexPage posts={posts} settings={settings} photos={photos} />
+    return (
+      <PreviewIndexPage posts={posts} settings={settings} photos={photos} />
+    )
   }
 
-  return <IndexPage posts={posts} settings={settings} about={about} photos={photos} />
+  return (
+    <IndexPage
+      posts={posts}
+      settings={settings}
+      about={about}
+      photos={photos}
+    />
+  )
 }
 
 export const getStaticProps: GetStaticProps<PageProps, Query> = async (ctx) => {

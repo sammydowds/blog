@@ -1,5 +1,6 @@
 import PostPreview from 'components/PostPreview'
 import type { Post } from 'lib/sanity.queries'
+
 import { SectionHeader } from './SectionHeader'
 
 export default function Posts({ posts }: { posts: Post[] }) {
