@@ -20,7 +20,7 @@ module.exports = {
         'oklahoma-blue': '#0073cf',
         'oklahoma-beige': '#efe8c7',
         'oklahoma-beige-light': '#FDFCF9',
-        'linkedin-light': '#e6f6ff'
+        'linkedin-light': '#e6f6ff',
       },
       spacing: {
         28: '7rem',

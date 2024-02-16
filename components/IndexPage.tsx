@@ -7,9 +7,9 @@ import * as fallback from 'lib/fallback.data'
 import type { About, Photo, Post, Settings } from 'lib/sanity.queries'
 
 import { AboutMe } from './AboutMe'
-import Photos from './Photos'
-import { LinkedInCTA } from './LinkedInCTA'
 import { HireMeCTA } from './HireMeCTA'
+import { LinkedInCTA } from './LinkedInCTA'
+import Photos from './Photos'
 
 export interface IndexPageProps {
   about?: About
