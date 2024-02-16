@@ -6,27 +6,21 @@ export const LinkedInCTA = () => {
         <table>
           <tbody>
             <tr>
-              <td className="min-w-16 align-top italic">
-                &apos;16-&apos;18
-              </td>
+              <td className="min-w-16 align-top italic">&apos;16-&apos;18</td>
               <td className="pl-2">
                 Mechanical Engineer for Michelin Tires working on international
                 projects.
               </td>
             </tr>
             <tr>
-              <td className="min-w-12 align-top italic">
-                &apos;18-&apos;20
-              </td>
+              <td className="min-w-12 align-top italic">&apos;18-&apos;20</td>
               <td className="pl-2">
                 Project Manager for multi-million dollar industrial robotics
                 projects.
               </td>
             </tr>
             <tr>
-              <td className="min-w-12 align-top italic">
-                &apos;20-&apos;23
-              </td>
+              <td className="min-w-12 align-top italic">&apos;20-&apos;23</td>
               <td className="pl-2">
                 Shipping features, pages, and APIs as a full-stack software
                 engineer.
