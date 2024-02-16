@@ -3,20 +3,20 @@ import { useState } from "react"
 
 const TESTIMONIALS = [
   {
-    summary: "Combined with his technical prowess and intelligence, his enthusiastic commitment to delivering the highest quality applications quickly made him stand out as an exceptional engineer at Zumper.",
-    author: "Colleen O'Brien (Zumper)",
-  },
-  {
-    summary: "Sammy and I worked at Zumper together for a couple of years, and I can highly recommend him as an engineer and teammate. He is passionate about his craft, has a strong work ethic, and is dedicated to delivering high-quality results.",
-    author: "Ellie Birbeck (Zumper)",
-  },
-  {
     summary: "He quickly became one of our top fullstack engineers, by constantly proving his excellent vision as an engineer and his kindness. I trust Sammy to take on any engineering project, he will find efficient solutions and ensure excellent communication with other teams, including design and product.",
     author: "Hugo Pineda (Zumper)",
   },
   {
     summary: "We worked together across a number of teams and projects, and it was a genuine pleasure watching Sammy grow into the outstanding full stack engineer he is today... Sammy is a genuinely talented engineer, and any company would be lucky to have him as an employee.",
     author: "Max Del Guidice (Zumper)",
+  },
+  {
+    summary: "Combined with his technical prowess and intelligence, his enthusiastic commitment to delivering the highest quality applications quickly made him stand out as an exceptional engineer at Zumper.",
+    author: "Colleen O'Brien (Zumper)",
+  },
+  {
+    summary: "Sammy and I worked at Zumper together for a couple of years, and I can highly recommend him as an engineer and teammate. He is passionate about his craft, has a strong work ethic, and is dedicated to delivering high-quality results.",
+    author: "Ellie Birbeck (Zumper)",
   },
   {
     summary: "...Sammy's technical prowess, collaborative spirit, and genuine passion for coding make them an outstanding full stack engineer... I wholeheartedly recommend Sammy and believe they will be a tremendous asset to any team or project they choose to undertake.",
