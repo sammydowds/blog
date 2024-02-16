@@ -55,33 +55,35 @@ export const HireMeCTA = () => {
 
   return (
     <div className="px-4 py-2 bg-oklahoma-beige-light flex-1 border-solid border-1 rounded-sm border-gray-500 flex md:flex-row max-md:flex-col gap-4">
-      <div className="flex flex-col justify-between flex-1 gap-2">
-        <div className="flex flex-row justify-between">
-          <div className="font-bold">How Is Working With Me?</div>
-          <div className="flex flex-row gap-2">
-            <div className="text-sm">
+      <div className="flex flex-col justify-between flex-1">
+        <div className="flex flex-row justify-between items-center max-md:mb-2">
+          <div className="font-bold text-lg">How Is Working With Me?</div>
+          <div className="flex flex-row gap-2 items-center">
+            <div className="text-xs">
               ({index + 1}/{TESTIMONIALS.length})
             </div>
             <div
-              className="flex justify-center items-center rounded-full h-6 w-6 bg-gray-200 hover:cursor-pointer"
+              className="flex justify-center items-center rounded-full h-8 w-8 bg-gray-200 hover:cursor-pointer"
               onClick={() => handleOnClickBack()}
             >
-              <ChevronLeftIcon strokeWidth={1} className="h-4 w-4" />
+              <ChevronLeftIcon strokeWidth={1} className="h-6 w-6" />
             </div>
             <div
-              className="flex justify-center items-center rounded-full h-6 w-6 bg-gray-200 hover:cursor-pointer"
+              className="flex justify-center items-center rounded-full h-8 w-8 bg-gray-200 hover:cursor-pointer"
               onClick={() => handleOnClickNext()}
             >
-              <ChevronRightIcon strokeWidth={1} className="h-4 w-4" />
+              <ChevronRightIcon strokeWidth={1} className="h-6 w-6" />
             </div>
           </div>
         </div>
-        <div className="flex flex-col gap-2 text-xs">
-          <div>&quot;{TESTIMONIALS[index]?.summary}&quot;</div>
-          <div>- {TESTIMONIALS[index]?.author}</div>
+        <div className="flex flex-col gap-2 m-auto">
+          <div className="italic">&quot;{TESTIMONIALS[index]?.summary}&quot;</div>
+          <div className="text-gray-800 self-end">
+            - {TESTIMONIALS[index]?.author}
+          </div>
         </div>
       </div>
-      <div className="md:w-36 flex-col gap-2 flex">
+      <div className="md:w-36 w-full flex-col gap-2 flex self-center">
         <a
           href="https://www.linkedin.com/in/sammydowds/"
           target="_blank"
