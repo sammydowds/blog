@@ -85,7 +85,7 @@ export const HireMeCTA = () => {
       </div>
       <div className="md:w-36 w-full flex-col gap-2 flex self-center">
         <a
-          href="https://www.linkedin.com/in/sammydowds/"
+          href="https://www.linkedin.com/in/sammydowds/details/recommendations/"
           target="_blank"
           rel="noopener noreferrer"
           className="text-center h-10 md:w-32 max-md:w-full bg-gray-100 hover:bg-gray-200 text-md text-gray-800 font-bold py-2 px-4 rounded"
