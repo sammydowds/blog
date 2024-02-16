@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { useState } from 'react'
 
 export const AboutMe = (about: About) => {
-  const [expanded, setExpanded] = useState(true)
+  const [expanded, setExpanded] = useState(false)
   const {
     title,
     hobbies,
