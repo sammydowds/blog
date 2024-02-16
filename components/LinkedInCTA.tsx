@@ -6,7 +6,7 @@ export const LinkedInCTA = () => {
         <table>
           <tbody>
             <tr>
-              <td className="text-nowrap align-top italic">
+              <td className="min-w-12 align-top italic">
                 &apos;16-&apos;18
               </td>
               <td className="pl-2">
@@ -15,7 +15,7 @@ export const LinkedInCTA = () => {
               </td>
             </tr>
             <tr>
-              <td className="text-nowrap align-top italic">
+              <td className="min-w-12 align-top italic">
                 &apos;18-&apos;20
               </td>
               <td className="pl-2">
@@ -24,7 +24,7 @@ export const LinkedInCTA = () => {
               </td>
             </tr>
             <tr>
-              <td className="text-nowrap align-top italic">
+              <td className="min-w-12 align-top italic">
                 &apos;20-&apos;23
               </td>
               <td className="pl-2">
