@@ -34,7 +34,7 @@ const TESTIMONIALS = [
   },
 ] as const
 
-export const HireMeCTA = () => {
+export const Testimonials = () => {
   const [index, setIndex] = useState(0)
 
   const handleOnClickNext = () => {
@@ -76,28 +76,14 @@ export const HireMeCTA = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col gap-2 m-auto">
-          <div className="italic">&quot;{TESTIMONIALS[index]?.summary}&quot;</div>
+        <div className="flex flex-col gap-2 m-auto text-sm">
+          <div className="italic">
+            &quot;{TESTIMONIALS[index]?.summary}&quot;
+          </div>
           <div className="text-gray-800 self-end">
             - {TESTIMONIALS[index]?.author}
           </div>
         </div>
-      </div>
-      <div className="md:w-36 w-full flex-col gap-2 flex self-center">
-        <a
-          href="https://www.linkedin.com/in/sammydowds/details/recommendations/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-center h-10 md:w-32 max-md:w-full bg-gray-100 hover:bg-gray-200 text-md text-gray-800 font-bold py-2 px-4 rounded"
-        >
-          View More
-        </a>
-        <a
-          href="mailto:sammycdowds@gmail.com"
-          className="text-center h-10 md:w-32 max-md:w-full bg-blue-500 hover:bg-blue-700 text-white text-md font-bold py-2 px-4 rounded"
-        >
-          Email Me
-        </a>
       </div>
     </div>
   )

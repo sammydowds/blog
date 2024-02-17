@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { LinkedInCTA } from '../components/LinkedInCTA'
+import { LinkedInCTA } from '../components/WorkHistory'
 
 const meta: Meta<typeof LinkedInCTA> = {
   component: LinkedInCTA,

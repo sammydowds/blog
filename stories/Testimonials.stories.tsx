@@ -1,13 +1,13 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { HireMeCTA } from '../components/HireMeCTA'
+import { Testimonials } from '../components/Testimonials'
 
-const meta: Meta<typeof HireMeCTA> = {
-  component: HireMeCTA,
+const meta: Meta<typeof Testimonials> = {
+  component: Testimonials,
 }
 
 export default meta
-type Story = StoryObj<typeof HireMeCTA>
+type Story = StoryObj<typeof Testimonials>
 
 /*
  *👇 Render functions are a framework specific feature to allow you control on how the component renders.
@@ -15,5 +15,5 @@ type Story = StoryObj<typeof HireMeCTA>
  * to learn how to use render functions.
  */
 export const Main: Story = {
-  render: () => <HireMeCTA />,
+  render: () => <Testimonials />,
 }
